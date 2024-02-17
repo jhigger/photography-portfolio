@@ -7,7 +7,7 @@ const Header = () => {
   const [open, toggle] = useToggle(false);
 
   return (
-    <header className="bg-white">
+    <header className="sticky top-0 bg-white">
       <div className="relative flex h-full items-center justify-between px-[50px] py-[12px] uppercase leading-[1.8]">
         <div className="font-['Arial'] text-[10px] tracking-[0.4em]">
           Enquire
