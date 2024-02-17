@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { useToggle } from "usehooks-ts";
 import { Instagram, X } from "lucide-react";
+import { useToggle } from "usehooks-ts";
+import { cn } from "~/utils/cn";
 
 const Header = () => {
   const [open, toggle] = useToggle(false);
@@ -19,11 +20,14 @@ const Header = () => {
           Menu
         </button>
         <aside
-          className={`fixed top-0 z-10 h-screen w-screen bg-black text-white transition-all duration-500 ease-in-out ${open ? "left-0" : "left-full"}`}
+          className={cn(
+            "fixed top-0 z-10 h-screen w-screen bg-black text-white transition-all duration-500 ease-in-out",
+            open ? "left-0" : "left-full",
+          )}
         >
           <nav className="relative grid h-full w-full grid-cols-1 items-center justify-center lg:grid-cols-3">
-            <button onClick={toggle} className="absolute right-12 top-8">
-              <X size={40} />
+            <button onClick={toggle} className="absolute right-16 top-4">
+              <X size={40} strokeWidth={1} />
             </button>
             <div className="flex h-full items-center justify-center">
               <span className="text-9xl font-thin uppercase lg:rotate-180 lg:[writing-mode:vertical-lr]">
