@@ -21,27 +21,27 @@ const Header = () => {
         </button>
         <aside
           className={cn(
-            "fixed top-0 z-10 h-screen w-screen bg-black text-white transition-all duration-500 ease-in-out",
+            " fixed top-0 z-10 h-max min-h-screen w-screen bg-black text-white transition-all duration-500 ease-in-out lg:h-full",
             open ? "left-0" : "left-full",
           )}
         >
           <nav className="relative grid h-full w-full grid-cols-1 items-center justify-center lg:grid-cols-3">
-            <button onClick={toggle} className="absolute right-16 top-4">
+            <button onClick={toggle} className="absolute right-16 top-4 z-20">
               <X size={40} strokeWidth={1} />
             </button>
-            <div className="flex h-full items-center justify-center">
+            <div className="hidden h-full items-center justify-center lg:flex">
               <span className="text-9xl font-thin uppercase lg:rotate-180 lg:[writing-mode:vertical-lr]">
                 Menu
               </span>
             </div>
-            <div className="col-span-1 flex h-full w-full items-center justify-center">
+            <div className="col-span-1 flex h-screen w-full items-center justify-center opacity-50 lg:opacity-100">
               <img
                 src="https://placehold.co/600x900/?text=Image"
                 alt="model"
-                className="h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
-            <div className="col-span-1 flex h-full flex-col items-center justify-center p-12">
+            <div className="absolute col-span-1 flex h-full w-full flex-col items-center justify-center p-12 lg:static">
               <ul className="space-y-4 border-l px-4 py-8 text-xl uppercase">
                 <li>Home</li>
                 <li>Portfolio</li>
