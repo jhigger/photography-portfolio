@@ -12,38 +12,76 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-center bg-[#E4E2DD]">
+      <main className="min-h-screen">
         <img
           src="https://placehold.co/1280x720/?text=Image"
           alt="hero"
           className="h-full w-full object-cover"
         />
-        <section className="container flex flex-col items-center justify-center gap-12 py-60 ">
-          <h1 className="text-xl font-light uppercase tracking-widest">
-            Editorial Wedding Photographer
-          </h1>
-          <div className="grid grid-cols-1 place-items-center gap-8 md:grid-cols-3">
-            <img
-              src="https://placehold.co/800x1200/?text=Image"
-              alt="sample"
-              className="h-[80%] rounded-xl"
-            />
-            <img
-              src="https://placehold.co/800x1200/?text=Image"
-              alt="sample"
-              className="rounded-xl"
-            />
-            <img
-              src="https://placehold.co/800x1200/?text=Image"
-              alt="sample"
-              className="h-[80%] rounded-xl"
-            />
+
+        <section className="bg-[#ecebe8] py-40">
+          <div className="container mx-auto flex flex-col items-center justify-center gap-12 ">
+            <h1 className="text-xl font-light uppercase tracking-widest">
+              Editorial Wedding Photographer
+            </h1>
+            <div className="grid grid-cols-1 place-items-center gap-8 md:grid-cols-3">
+              <img
+                src="https://placehold.co/800x1200/?text=Image"
+                alt="sample"
+                className="h-[80%] rounded-xl"
+              />
+              <img
+                src="https://placehold.co/800x1200/?text=Image"
+                alt="sample"
+                className="rounded-xl"
+              />
+              <img
+                src="https://placehold.co/800x1200/?text=Image"
+                alt="sample"
+                className="h-[80%] rounded-xl"
+              />
+            </div>
+            <span className="max-w-[700px] text-center text-5xl font-light uppercase leading-tight">
+              <Balancer>
+                Exquisite Photography <i>For</i> Modern Couples
+              </Balancer>
+            </span>
           </div>
-          <span className="max-w-[700px] text-center text-5xl font-light uppercase leading-tight">
-            <Balancer>
-              Exquisite Photography <i>For</i> Modern Couples
-            </Balancer>
-          </span>
+        </section>
+
+        <section className="bg-[#e4e2dd] py-28">
+          <div className="container mx-auto grid grid-cols-1 gap-28 md:grid-cols-2">
+            <img
+              src="https://placehold.co/800x1200/?text=Image"
+              alt="sample"
+              className="-mt-[175px] w-[461px] place-self-end self-start rounded-xl"
+            />
+            <div className="w-[500px] place-self-start">
+              <h2 className="mb-28 text-sm uppercase tracking-[0.25em]">
+                Behind The Lens
+              </h2>
+              <p className="mb-10 text-2xl">
+                Zak and his Renai team&apos;s editorial style of photography
+                shapes the creation of lifelong memories that radiate true
+                emotive moments.
+              </p>
+              <p className="text-md mb-16 font-light leading-loose">
+                Drawing inspiration from music, fashion, and classic cinema, Zak
+                photograph weddings in the most subtle, intimate, and alluring
+                way that adduces the beauty in timeless elegance. Artfully
+                creating contemporary, yet classic images that convey the true
+                love stories of their couples in a genuine and soulful way.
+                <br />
+                Renai&apos;s work is highly moving display of moments and
+                details that you might otherwise miss, creating memories that
+                you will love to return to as you revisit the images over the
+                years.
+              </p>
+              <button className="text-xs uppercase tracking-[0.25em] underline underline-offset-8">
+                Discover More
+              </button>
+            </div>
+          </div>
         </section>
       </main>
     </>
