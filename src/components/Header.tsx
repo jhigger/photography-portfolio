@@ -7,7 +7,7 @@ const Header = () => {
   const [open, toggle] = useToggle(false);
 
   return (
-    <header className="sticky top-0 bg-white">
+    <header className="sticky top-0 z-10 bg-white">
       <div className="relative flex h-full items-center justify-between px-[50px] py-[12px] uppercase leading-[1.8]">
         <div className="font-['Arial'] text-[10px] tracking-[0.4em]">
           Enquire
@@ -21,12 +21,12 @@ const Header = () => {
         </button>
         <aside
           className={cn(
-            " fixed top-0 z-10 h-max min-h-screen w-screen bg-black text-white transition-all duration-500 ease-in-out lg:h-full",
+            "fixed top-0 z-20 h-max min-h-screen w-screen bg-black text-white transition-all duration-500 ease-in-out lg:h-full",
             open ? "left-0" : "left-full",
           )}
         >
           <nav className="relative grid h-full w-full grid-cols-1 items-center justify-center lg:grid-cols-3">
-            <button onClick={toggle} className="absolute right-16 top-4 z-20">
+            <button onClick={toggle} className="absolute right-16 top-4 z-30">
               <X size={40} strokeWidth={1} />
             </button>
             <div className="hidden h-full items-center justify-center lg:flex">
