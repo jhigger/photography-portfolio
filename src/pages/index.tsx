@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Form from "~/components/Form";
 import Header from "~/components/Header";
 import Hero from "~/components/Hero";
 import Section1 from "~/components/Section1";
@@ -24,18 +25,21 @@ export default function Home() {
           href="https://static.showit.co/200/MKXNqRRqQ7G3SGhRZC9-OQ/164641/renaistudio-edirorial-wedding-photographer.png"
         />
       </Head>
-      <main className="h-screen overflow-y-auto overflow-x-hidden [perspective:100px]">
+      <div className="relative h-screen overflow-hidden">
         <Header />
-        <Hero />
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
-        <Section7 />
-        <Section8 />
-      </main>
+        <main className="h-[calc(100vh-58px)] overflow-y-auto overflow-x-hidden [perspective:100px]">
+          <Hero />
+          <Section1 />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+          <Section5 />
+          <Section6 />
+          <Section7 />
+          <Section8 />
+          <Form />
+        </main>
+      </div>
     </>
   );
 }
