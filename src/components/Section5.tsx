@@ -2,7 +2,7 @@
 
 const Section5 = () => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden bg-white">
       <div className="container mx-auto grid grid-cols-5 place-items-center gap-10 pb-20 pt-44">
         <div className="col-span-1 col-start-1 row-span-6 row-start-3 mr-60 h-[500px] w-[350px]">
           <img

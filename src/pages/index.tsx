@@ -23,8 +23,8 @@ export default function Home() {
           href="https://static.showit.co/200/MKXNqRRqQ7G3SGhRZC9-OQ/164641/renaistudio-edirorial-wedding-photographer.png"
         />
       </Head>
-      <Header />
-      <main className="min-h-screen">
+      <main className="h-screen overflow-y-auto overflow-x-hidden [perspective:100px]">
+        <Header />
         <Hero />
         <Section1 />
         <Section2 />
