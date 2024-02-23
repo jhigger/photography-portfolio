@@ -7,7 +7,7 @@ const Section6 = () => {
       <img
         src="https://placehold.co/1280x720/?text=Image"
         alt=""
-        className="absolute -z-10 h-full w-full object-cover [transform:translateZ(-50px)_scale(3.5)]"
+        className="absolute -z-10 h-[200%] w-full object-cover [transform:translateZ(-50px)_scale(2)]"
       />
 
       <span className="w-[800px] text-6xl font-light">

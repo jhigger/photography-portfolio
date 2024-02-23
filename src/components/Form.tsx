@@ -1,14 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { Instagram } from "lucide-react";
-import React from "react";
 
 const Form = () => {
   return (
-    <section className="relative -z-10 flex h-[800px] w-full flex-col items-center justify-center gap-10 text-center  text-white [transform-style:preserve-3d]">
+    <section className="relative -z-20 flex h-[800px] w-full flex-col items-center justify-center gap-10 text-white [transform-style:preserve-3d]">
       <img
         src="https://placehold.co/1280x720/?text=Image"
         alt="sample"
-        className="absolute -z-10 h-full w-full object-cover [transform:translateZ(-50px)_scale(2.5)]"
+        className="absolute -z-20 h-full w-full object-cover [transform:translateZ(-50px)_scale(3)]"
       />
       <div className="absolute top-[400px] mb-20 h-fit w-full bg-[#d9d9d9]">
         <div className="container mx-auto -mt-[80px] flex items-center justify-center pb-[480px]">
