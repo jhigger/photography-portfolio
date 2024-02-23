@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { Instagram, X } from "lucide-react";
-import { useToggle } from "usehooks-ts";
 import { cn } from "~/utils/cn";
 
-const Header = () => {
-  const [open, toggle] = useToggle(false);
+type HeaderProps = { open: boolean; toggle: () => void };
 
+const Header = ({ open, toggle }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-10 bg-white">
       <div className="relative flex h-full items-center justify-between px-[50px] py-[12px] uppercase leading-[1.8]">
@@ -21,7 +20,7 @@ const Header = () => {
         </button>
         <aside
           className={cn(
-            "fixed top-0 z-20 h-max min-h-screen w-screen bg-black text-white transition-all duration-500 ease-in-out lg:h-full",
+            "absolute top-0 z-20 h-max min-h-screen w-screen bg-black text-white transition-all duration-500 ease-in-out lg:h-full",
             open ? "left-0" : "left-full",
           )}
         >

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useToggle } from "usehooks-ts";
 import Form from "~/components/Form";
 import Header from "~/components/Header";
 import Hero from "~/components/Hero";
@@ -10,8 +11,11 @@ import Section5 from "~/components/Section5";
 import Section6 from "~/components/Section6";
 import Section7 from "~/components/Section7";
 import Section8 from "~/components/Section8";
+import { cn } from "~/utils/cn";
 
 export default function Home() {
+  const [open, toggle] = useToggle(false);
+
   return (
     <>
       <Head>
@@ -25,21 +29,24 @@ export default function Home() {
           href="https://static.showit.co/200/MKXNqRRqQ7G3SGhRZC9-OQ/164641/renaistudio-edirorial-wedding-photographer.png"
         />
       </Head>
-      <div className="relative h-screen overflow-hidden">
-        <Header />
-        <main className="h-[calc(100vh-58px)] overflow-y-auto overflow-x-hidden [perspective:100px]">
-          <Hero />
-          <Section1 />
-          <Section2 />
-          <Section3 />
-          <Section4 />
-          <Section5 />
-          <Section6 />
-          <Section7 />
-          <Section8 />
-          <Form />
-        </main>
-      </div>
+      <main
+        className={cn(
+          "relative h-screen overflow-x-hidden [perspective:100px]",
+          open ? "overflow-y-hidden" : "overflow-y-auto",
+        )}
+      >
+        <Header open={open} toggle={toggle} />
+        <Hero />
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+        <Section7 />
+        <Section8 />
+        <Form />
+      </main>
     </>
   );
 }
