@@ -1,10 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
+import { motion } from "framer-motion";
 
 const Section7 = () => {
   return (
     <section className="bg-[#19191a]">
       <div className="container mx-auto grid grid-cols-1 gap-28 pb-80 pt-20 md:grid-cols-2">
-        <img
+        <motion.img
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          viewport={{ once: true }}
           src="https://placehold.co/400x600/?text=Image"
           alt="sample"
           className="h-[600px] w-[400px] place-self-end rounded-xl bg-cover"

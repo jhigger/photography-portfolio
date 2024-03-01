@@ -1,14 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
+import { motion } from "framer-motion";
 
 const Section4 = () => {
   return (
     <section className="bg-black text-white">
       <div className="container mx-auto flex items-center justify-center">
         <div className="relative grid w-[1000px] grid-cols-1 items-center justify-center gap-40 p-20 pb-48 md:grid-cols-2">
-          <div className="col-span-full w-full tracking-wider">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+            className="col-span-full w-full tracking-wider"
+          >
             <div className="text-7xl lowercase italic text-gray-500">The</div>
             <div className="text-6xl uppercase">Experience</div>
-          </div>
+          </motion.div>
           <div className="col-span-1 ml-4 w-[400px] place-self-start">
             <h2 className="mb-16 text-sm uppercase tracking-[0.25em]">
               Our Mission
@@ -25,7 +32,11 @@ const Section4 = () => {
               Discover More
             </button>
           </div>
-          <img
+          <motion.img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
             src="https://placehold.co/400x600/?text=Image"
             alt="sample"
             className="absolute -bottom-16 -right-24 col-span-1 mt-[25px] h-[600px] w-[400px] place-self-end self-start rounded-xl"

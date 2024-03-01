@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 
 const Form = () => {
@@ -15,7 +16,11 @@ const Form = () => {
             Contact
           </div>
           <div className="relative mr-16 h-[900px] w-[700px] space-y-10 rounded-xl bg-white p-20">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
               src="https://placehold.co/1280x720/?text=Image"
               alt="sample"
               className="absolute -bottom-[45%] -left-[15%] h-[475px] w-[345px] rounded-xl object-cover"
